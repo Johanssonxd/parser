@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Analizador Léxico</title>
+</head>
+
+<body>
+    <header>
+    <h1>ANALIZADOR LÉXICO</h1>
+    </header>
+
+    <main>
+        <section id="seccion-entrada">
+            <label for="codigo-fuente">Ingrese el código fuente:</label>
+            <textarea id="codigo-fuente" placeholder="Escriba el código fuente aquí..."></textarea>
+            <button id="btn-analizar">Analizar</button>
+        </section>
+
+        <section id="seccion-resultados">
+            <h2>Resultados</h2>
+
+            <h3>Lista de Tokens</h3>
+            <table id="tabla-tokens">
+                <thead>
+                    <tr>
+                        <th>Lexema</th>
+                        <th>Token</th>
+                        <th>Línea</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h3>Tabla de Símbolos</h3>
+            <table id="tabla-simbolos">
+                <thead>
+                    <tr>
+                        <th>Lexema</th>
+                        <th>Token</th>
+                        <th>Línea</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h3>Tabla Sintáctica LL(1)</h3>
+            <div style="overflow-x: auto;">
+                <table id="tabla-ll1">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Resultados del Parser</h3>
+            <div id="resultado-parser">
+                Esperando análisis...
+            </div>
+            <button id="btn-descargar">Descargar traza_analisis.txt</button>
+
+        </section>
+    </main>
+    <script src="firstFollow.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
